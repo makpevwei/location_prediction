@@ -1,0 +1,100 @@
+<!--
+author: Michael Akpevwe
+-->
+
+<html>
+  <head>
+    <style>
+      body{
+        background-color: #404040;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      }
+      div.form{
+        box-shadow: 2px 2px 30px #1a1a1a;
+        width: 45vw;
+        background-color: #bfbfbf;
+        text-align: center;
+        border-left-color: #a6a6a6;
+      }
+      table{
+        font-size: 10px;
+        box-shadow: 2px 2px 30px #1a1a1a;
+        padding: 15px;
+        background-color: #bfbfbf;
+        width: 420px;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-color: #ffff00;
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+      }
+      form{
+        border-left-style: solid;
+        border-color: #ffff00;
+        border-left-width: 5px;
+        padding: 15px;
+      }
+      h1{
+        color: #f2f2f2;
+        text-align: center;
+      }
+      input[type=text]{
+        text-align: center;
+        width: 200px;
+        height: 30px;
+        border: 0px;
+      }
+      input[type=submit]{
+        background-color: #ffff00;
+        width: 90px;
+        height: 30px;
+        border: 0px;
+      }
+      input[type=submit]:hover{
+        box-shadow: 2px 4px 20px #666666;
+      }
+      span{
+        color: #ffffff;
+      }
+      td{
+        color: #595959;
+      }
+      td.heading{
+        width: 50px;
+      }
+    </style>
+    <title>Location Prediction Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Location Predictor</h1>
+    <center>
+    <div class="form">
+    <form action="/predict" method="post">
+      Enter values to predict the 'user's location<br><br>
+      <input type="text" name="loc_month" placeholder="MONTH" autofocus required><br><br>
+      <input type="text" name="loc_date" placeholder="DATE" required><br><br>
+      <input type="text" name="loc_hour" placeholder="HOUR" required><br><br>
+      <input type="text" name="loc_minute" placeholder="MINUTE" required><br><br>
+      <input type="text" name="loc_second" placeholder="SECOND" required><br><br>
+      <input type="submit" value="Predict">
+    </form>
+  </div>
+</center>
+<br>
+<br>
+<div class = "legend">
+  <table>
+<tr><td class = "heading">MONTH :</td><td>month of the year in integer value</td></tr><br>
+<tr><td class = "heading">DATE :</td><td>date of the month</td></tr><br>
+<tr><td class = "heading">HOUR :</td><td>hour of the day</td></tr><br>
+<tr><td class = "heading">MINUTE :</td><td>minutes in an hour</td></tr><br>
+<tr><td class = "heading">SECOND :</td><td>seconds in a minute</td></tr><br>
+</table>
+</div>
+</body>
+</html>
